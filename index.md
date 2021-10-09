@@ -1,5 +1,7 @@
 ![image](https://github.com/SandySY/javaScript/tree/master/lexical-scope/example3.png)
 
+# [进入Web主页](./index.html)
+
 # JavaScript 系列 **经验笔记**
 
 ## 阅读目录
