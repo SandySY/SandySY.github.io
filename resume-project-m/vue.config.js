@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
     publicPath: '/apps/resume-m/',
-    outputDir: './apps/resume-m',
+    outputDir: '../apps/resume-m',
     chainWebpack: config => {
         config.plugin('html').tap(args => {
             args[0].title = "Sandy's Website";
