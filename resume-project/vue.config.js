@@ -2,14 +2,12 @@ const path = require('path');
 
 module.exports = {
     publicPath: '/apps/resume/',
-    outputDir: '../resume',
+    outputDir: './apps/resume',
     chainWebpack: config => {
-        config
-            .plugin('html')
-            .tap(args => {
-                args[0].title = "Sandy' Website";
-                return args;
-            });
+        config.plugin('html').tap(args => {
+            args[0].title = "Sandy' Website";
+            return args;
+        });
 
         config.resolve.alias
             .set('@images', path.resolve(__dirname, './src/assets/images'))
