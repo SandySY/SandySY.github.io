@@ -52,7 +52,7 @@ import Item from '@components/item/Item.vue';
 
 export default class Home extends Vue {
     private company = '浪潮';
-    private job = '前端开发组长';
+    private job = '前端研发组长';
 
     get years (): number {
         return new Date().getFullYear() - 2014;

@@ -8,3 +8,6 @@ nohup.out
 # Vendors
 node_modules/
 
+
+resume/blog/
+resume-m/blog/

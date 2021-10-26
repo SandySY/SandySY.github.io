@@ -57,13 +57,15 @@ export const list = {
     //     tag: '面试题',
     //     date: '2020-10-28'
     // }],
-    // lottie: [{
-    //     fileName: 'lottie',
-    //     img: require('@images/lottie.jpg'),
-    //     title: '初探 lottie',
-    //     tag: 'lottie',
-    //     date: '2020-03-22'
-    // }]
+    lottie: [
+        {
+            fileName: "lottie",
+            img: require("@images/lottie.jpg"),
+            title: "初探 lottie",
+            tag: "lottie",
+            date: "2020-03-22"
+        }
+    ]
 };
 
 declare interface Category {

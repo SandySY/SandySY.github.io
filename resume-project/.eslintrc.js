@@ -15,6 +15,8 @@ module.exports = {
         'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
         'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
         semi: ['error', 'always'],
+        quotes: ['error', 'single', 'avoid-escape'],
+        'space-before-function-paren': 0,
         indent: ['error', 4],
         'eol-last': 0,
         '@typescript-eslint/no-var-requires': 'off',
