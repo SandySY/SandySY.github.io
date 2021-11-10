@@ -12,11 +12,15 @@
             <div class="brife">
                 <div class="brife-title">About Me</div>
                 <p>
-                    {{ years }}年多以来，前端开发一直是我工作的中心。在这个快速而令人兴奋的旅程中，我已经从一个门外汉变成了一个能够独当一面前端工程师。
+                    {{
+                        years
+                    }}年多以来，前端开发一直是我工作的中心。在这个快速而令人兴奋的旅程中，我已经从一个门外汉变成了一个能够独当一面前端工程师。
                     前端技术的不断更新，促使着我不断地去学习，这是一件不可松懈的事情。
                 </p>
                 <p>
-                    目前，这段旅程让我来到了{{company}}，在那里我是一名 {{job}}。在这个职位上，和许多的前端工程师一样，使用 vue 开发项目。
+                    目前，这段旅程让我来到了{{ company }}，在那里我是一名
+                    {{ job }}。在这个职位上，和许多的前端工程师一样，使用 vue
+                    开发项目。
                 </p>
             </div>
             <div class="pic"></div>
@@ -24,12 +28,27 @@
         <div class="experiences">
             <div class="work">
                 <div class="title">Experience</div>
-                <Item :company="company" :date="'2017.9 - 至今'" :address="'成都'" :job="job"></Item>
-                <Item :company="'中智'" :date="'2014.03 - 2017.03'" :address="'成都'" :job="'Web 前端工程师'"></Item>
+                <Item
+                    :company="company"
+                    :date="'2017.9 - 至今'"
+                    :address="'成都'"
+                    :job="job"
+                ></Item>
+                <Item
+                    :company="'中智'"
+                    :date="'2014.03 - 2017.03'"
+                    :address="'成都'"
+                    :job="'Web 前端工程师'"
+                ></Item>
             </div>
             <div class="education">
                 <div class="title">Education</div>
-                <Item :company="'四川农业大学'" :date="'2010.09 - 2014.06'" :address="'四川'" :job="'本科 | 计算机科学与技术专业'"></Item>
+                <Item
+                    :company="'四川农业大学'"
+                    :date="'2010.09 - 2014.06'"
+                    :address="'四川'"
+                    :job="'本科 | 计算机科学与技术专业'"
+                ></Item>
             </div>
         </div>
         <Footer></Footer>
@@ -49,16 +68,14 @@ import Item from '@components/item/Item.vue';
         Item
     }
 })
-
 export default class Home extends Vue {
     private company = '浪潮';
     private job = '前端开发组长';
 
-    get years (): number {
+    get years(): number {
         return new Date().getFullYear() - 2014;
     }
 }
-
 </script>
 
 <style lang="scss" scoped>
@@ -71,7 +88,7 @@ export default class Home extends Vue {
         @include bg('~@images/banner.jpg', cover);
         &::before {
             content: '';
-            background: rgba(0, 0, 0, 0.57);
+            background: rgba(0, 0, 0, 0.37);
             position: absolute;
             top: 0;
             left: 0;
@@ -154,7 +171,8 @@ export default class Home extends Vue {
         box-sizing: border-box;
         background: linear-gradient(90deg, #03a9f4, #03aaaa);
 
-        .work, .education {
+        .work,
+        .education {
             display: flex;
             flex-direction: column;
             @include wh(1200px, auto);

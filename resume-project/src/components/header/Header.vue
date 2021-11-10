@@ -5,8 +5,8 @@
             <div class="nav">
                 <router-link to="/home" class="nav-item">Home</router-link>
                 <router-link to="/arts" class="nav-item">Arts</router-link>
-                <div @click="goToBlog" class="nav-item">Blog</div>
-                <!-- <router-link to="/blog" class="nav-item">Blog</router-link> -->
+                <div @click="goToBlog" class="nav-item">Notes</div>
+                <router-link to="/blog" class="nav-item">Blog</router-link>
                 <div @click="github" class="nav-item">Github</div>
             </div>
             <div class="dream" v-if="showBg">

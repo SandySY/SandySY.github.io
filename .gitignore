@@ -9,5 +9,5 @@ nohup.out
 node_modules/
 
 
-resume/blog/
-resume-m/blog/
+# resume/blog/
+# resume-m/blog/

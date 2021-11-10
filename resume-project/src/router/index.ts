@@ -19,15 +19,17 @@ const routes: Array<RouteConfig> = [
         path: '/arts',
         component: () =>
             import(/* webpackChunkName: 'arts' */ '@views/arts/index.vue')
+    },
+    {
+        path: '/blog',
+        component: () =>
+            import(/* webpackChunkName: 'blog' */ '@views/blog/Blog.vue')
+    },
+    {
+        path: '/detail',
+        component: () =>
+            import(/* webpackChunkName: 'detail' */ '@views/blog/Detail.vue')
     }
-    // {
-    //     path: '/blog',
-    //     component: () => import(/* webpackChunkName: 'blog' */ '@views/blog/Blog.vue')
-    // },
-    // {
-    //     path: '/detail',
-    //     component: () => import(/* webpackChunkName: 'detail' */ '@views/blog/Detail.vue')
-    // }
 ];
 
 const router = new VueRouter({

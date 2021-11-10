@@ -2,9 +2,15 @@
     <div class="wrap-card">
         <Card :body-style="{ padding: '0px' }" class="card">
             <div class="pic">
-                <img :src="img" alt="">
+                <img :src="img" alt="" />
             </div>
-            <router-link :to="{path: '/detail', query: {category: curCategory, fileName: fileName}}"><div class="title">{{ title }}</div></router-link>
+            <router-link
+                :to="{
+                    path: '/detail',
+                    query: { category: curCategory, fileName: fileName }
+                }"
+                ><div class="title">{{ title }}</div></router-link
+            >
             <div class="date">{{ tag }}, {{ date }}</div>
         </Card>
     </div>

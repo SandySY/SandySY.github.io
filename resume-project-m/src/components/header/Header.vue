@@ -5,18 +5,27 @@
             <div class="nav">
                 <Dropdown>
                     <span class="el-dropdown-link nav-item">
-                        {{ page }}<i class="el-icon-arrow-down el-icon--right"></i>
+                        {{ page }}
+                        <i class="el-icon-arrow-down el-icon--right"></i>
                     </span>
                     <dropdown-menu>
                         <dropdown-item>
-                            <router-link to="/home" class="nav-item">Home</router-link>
+                            <router-link to="/home" class="nav-item">
+                                Home
+                            </router-link>
                         </dropdown-item>
                         <dropdown-item>
-                            <router-link to="/arts" class="nav-item" >Arts</router-link>
+                            <router-link to="/arts" class="nav-item">
+                                Arts
+                            </router-link>
                         </dropdown-item>
                         <dropdown-item>
-                            <div @click="goToBlog" class="nav-item">Blog</div>
-                            <!-- <router-link to="/blog" class="nav-item">Blog</router-link> -->
+                            <router-link to="/blog" class="nav-item">
+                                Blog
+                            </router-link>
+                        </dropdown-item>
+                        <dropdown-item>
+                            <div @click="goToBlog" class="nav-item">Notes</div>
                         </dropdown-item>
                         <dropdown-item>
                             <div @click="github" class="nav-item">Github</div>

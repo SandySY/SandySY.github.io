@@ -21,20 +21,20 @@ import HyperDown from 'hyperdown';
         Card
     }
 })
-
 export default class Detail extends Vue {
     private content = '';
 
-    created (): void {
+    created(): void {
         const parser = new HyperDown();
 
         const query = this.$route.query;
+        const url = `/blog/${query.category}/${query.fileName}${
+            ['javaScript', 'vueNotes'].includes(String(query.category)) ? '/README' : ''
+        }.md`;
 
-        request
-            .get(`/blog/${query.category}/${query.fileName}.md`)
-            .then((res) => {
-                this.content = parser.makeHtml(res.data);
-            });
+        request.get(url).then(res => {
+            this.content = parser.makeHtml(res.data);
+        });
     }
 }
 </script>

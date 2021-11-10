@@ -3,7 +3,16 @@
         <Header :showBg="true"></Header>
         <div class="content">
             <div class="list">
-                <Block :curCategory="curCategory" v-for="item in curList" :key="item.title" :fileName="item.fileName" :img="item.img" :title="item.title" :tag="item.tag" :date="item.date"></Block>
+                <Block
+                    :curCategory="curCategory"
+                    v-for="item in curList"
+                    :key="item.title"
+                    :fileName="item.fileName"
+                    :img="item.img"
+                    :title="item.title"
+                    :tag="item.tag"
+                    :date="item.date"
+                ></Block>
             </div>
             <Category @selectCategory="selectCategory"></Category>
         </div>
@@ -37,23 +46,21 @@ declare interface Article {
         Footer
     }
 })
-
 export default class Blog extends Vue {
     private list = list;
 
-    private curCategory = 'phaser';
+    private curCategory = 'javaScript';
 
-    get curList (): Article[] | void {
+    get curList(): Article[] | void {
         if (hasKey(this.list, this.curCategory)) {
             return this.list[this.curCategory];
         }
     }
 
-    private selectCategory (value: string): void {
+    private selectCategory(value: string): void {
         this.curCategory = value;
     }
 }
-
 </script>
 
 <style lang="scss" scoped>

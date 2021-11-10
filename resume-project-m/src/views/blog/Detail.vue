@@ -29,9 +29,13 @@ export default class Detail extends Vue {
         const parser = new HyperDown();
 
         const query = this.$route.query;
-
+        const url = `/blog/${query.category}/${query.fileName}${
+            ['javaScript', 'vueNotes'].includes(String(query.category))
+                ? '/README'
+                : ''
+        }.md`;
         request
-            .get(`/blog/${query.category}/${query.fileName}.md`)
+            .get(url)
             .then((res) => {
                 this.content = parser.makeHtml(res.data);
             });
