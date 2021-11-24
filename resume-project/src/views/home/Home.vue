@@ -19,7 +19,7 @@
                 </p>
                 <p>
                     目前，这段旅程让我来到了{{ company }}，在那里我是一名
-                    {{ job }}。在这个职位上，和许多的前端工程师一样，使用 vue
+                    {{ job }}。在这个职位上，和许多的前端工程师一样，使用 Vue、Angular、Nuxt、React、Dcloud、Python 等
                     开发项目。
                 </p>
             </div>
